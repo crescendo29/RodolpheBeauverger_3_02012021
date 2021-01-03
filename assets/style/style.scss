@@ -1,0 +1,26 @@
+$header1: 2.3rem;
+$header2: 2.3rem;
+$header3: 2.5rem;
+$header4: 1.6rem;
+$text: 1.8rem;
+$background-color: #154353;
+$black-text: black;
+$gradient: linear-gradient(
+  to bottom right,
+  #ff79da,
+  #9356dc
+);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import "global";
+@import "header";
+@import "hero";
+@import "content";
+@import "footer";

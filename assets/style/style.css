@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+h5 {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2rem 0 1rem 0;
+  -webkit-box-shadow: 0 0.2rem 0.5rem #bbbaba;
+          box-shadow: 0 0.2rem 0.5rem #bbbaba;
+  position: relative;
+}
+
+header img {
+  width: 50%;
+}
+
+.hero__location {
+  background: #eaeaea;
+}
+
+.hero__location .hero__location__name {
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hero__location .hero__location__name i {
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.hero__description {
+  text-align: center;
+  background: #f6f6f6;
+  min-height: 43vh;
+}
+
+.hero__description h2 {
+  padding: 4rem 0rem 1.5rem 0rem;
+}
+
+.hero__description p {
+  color: #7d7d7d;
+  padding-bottom: 2rem;
+}
+
+.hero__description button {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 1.4rem;
+  -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
+          box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
+}
+/*# sourceMappingURL=style.css.map */
