@@ -1,0 +1,56 @@
+#restaurants {
+  background: #f6f6f6;
+  h2 {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    width: 88%;
+    margin: auto;
+  }
+  .restaurant {
+    position: relative;
+    width: 88%;
+    margin: auto;
+    height: 38vh;
+    border-radius: 15px;
+    background: white;
+    margin-bottom: 2rem;
+    box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
+      3px 5px 15px rgba(161, 161, 161, 0.1);
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 70%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    span {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding: 0.6rem 1rem;
+      background: #99e2d0;
+      color: #008766;
+    }
+    .restaurant__about {
+      @include flex(space-between, center, row);
+      width: 90%;
+      margin: auto;
+      padding-top: 1.5rem;
+      p {
+        font-weight: 300;
+        font-size: 1.7rem;
+        padding-top: 0.2rem;
+      }
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      i {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}

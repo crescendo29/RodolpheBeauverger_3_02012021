@@ -1,11 +1,13 @@
 .hero__location {
   background: #eaeaea;
   .hero__location__name {
-    width: 60%;
-    margin: auto;
-    @include flex(flex-start, center, row);
+    @include flex(center, center, row);
+    h4 {
+      font-weight: 500;
+      padding-right: 3rem;
+    }
     i {
-      padding: 2rem;
+      padding: 2rem 2rem 2rem 1.5rem;
       font-size: 1.5rem;
     }
   }
@@ -13,7 +15,7 @@
 .hero__description {
   text-align: center;
   background: #f6f6f6;
-  min-height: 35vh;
+  min-height: 42vh;
   h2 {
     padding: 4rem 0rem 1.5rem 0rem;
   }
@@ -30,12 +32,17 @@
     padding: 1.4rem;
     box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2),
       3px 5px 8px rgba(128, 128, 128, 0.1);
+    &:hover {
+      background: $gradientHover;
+      box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4),
+        3px 5px 8px rgba(128, 128, 128, 0.3);
+    }
   }
 }
 .hero__how {
   width: 90%;
   margin: auto;
-  min-height: 55vh;
+  min-height: 65vh;
   h2 {
     padding-top: 4rem;
   }
@@ -45,20 +52,20 @@
     counter-reset: li;
     @include flex(space-between, center, column);
     li {
-      @include flex(space-around, center, row);
+      @include flex(flex-start, center, row);
       width: 95%;
       border-radius: 25px;
       min-height: 9vh;
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: left;
+      font-size: 1.6rem;
+      font-weight: 500;
       background: #f6f6f6;
-      margin: 0rem 3rem 3rem 3rem;
+      margin-bottom: 3rem;
       box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
         3px 5px 15px rgba(161, 161, 161, 0.1);
       i {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: #7e7e7e;
+        padding: 0 3rem;
       }
     }
     :nth-child(3) {
@@ -78,7 +85,7 @@
       background: #9356dc;
       border-radius: 100%;
       padding: 0.3rem 0.7rem;
-      margin-left: -3rem;
+      margin-left: -1rem;
       margin-right: 0rem;
       direction: rtl;
     }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-  font-size: 2.3rem;
+  font-size: 2.8rem;
 }
 
 button,
@@ -32,7 +32,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
 h4,
@@ -63,14 +63,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
   -webkit-box-shadow: 0 0.2rem 0.5rem #bbbaba;
           box-shadow: 0 0.2rem 0.5rem #bbbaba;
   position: relative;
 }
 
-header img {
-  width: 50%;
+header h1 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 .hero__location {
@@ -78,14 +78,12 @@ header img {
 }
 
 .hero__location .hero__location__name {
-  width: 60%;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -95,15 +93,20 @@ header img {
           flex-direction: row;
 }
 
+.hero__location .hero__location__name h4 {
+  font-weight: 500;
+  padding-right: 3rem;
+}
+
 .hero__location .hero__location__name i {
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 1.5rem;
   font-size: 1.5rem;
 }
 
 .hero__description {
   text-align: center;
   background: #f6f6f6;
-  min-height: 35vh;
+  min-height: 42vh;
 }
 
 .hero__description h2 {
@@ -116,8 +119,8 @@ header img {
 }
 
 .hero__description button {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79d9, #9356dc);
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
@@ -127,10 +130,17 @@ header img {
           box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
 }
 
+.hero__description button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff7edb), to(#a161f0));
+  background: linear-gradient(to bottom right, #ff7edb, #a161f0);
+  -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
+          box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
+}
+
 .hero__how {
   width: 90%;
   margin: auto;
-  min-height: 55vh;
+  min-height: 65vh;
 }
 
 .hero__how h2 {
@@ -160,8 +170,9 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -172,18 +183,18 @@ header img {
   width: 95%;
   border-radius: 25px;
   min-height: 9vh;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 500;
   background: #f6f6f6;
-  margin: 0rem 3rem 3rem 3rem;
+  margin-bottom: 3rem;
   -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
           box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
 }
 
 .hero__how ol li i {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #7e7e7e;
+  padding: 0 3rem;
 }
 
 .hero__how ol :nth-child(3) {
@@ -205,8 +216,136 @@ header img {
   background: #9356dc;
   border-radius: 100%;
   padding: 0.3rem 0.7rem;
-  margin-left: -3rem;
+  margin-left: -1rem;
   margin-right: 0rem;
   direction: rtl;
+}
+
+#restaurants {
+  background: #f6f6f6;
+}
+
+#restaurants h2 {
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+  width: 88%;
+  margin: auto;
+}
+
+#restaurants .restaurant {
+  position: relative;
+  width: 88%;
+  margin: auto;
+  height: 38vh;
+  border-radius: 15px;
+  background: white;
+  margin-bottom: 2rem;
+  -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+          box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+}
+
+#restaurants .restaurant img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#restaurants .restaurant span {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  background: #99e2d0;
+  color: #008766;
+}
+
+#restaurants .restaurant .restaurant__about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: auto;
+  padding-top: 1.5rem;
+}
+
+#restaurants .restaurant .restaurant__about p {
+  font-weight: 300;
+  font-size: 1.7rem;
+  padding-top: 0.2rem;
+}
+
+#restaurants .restaurant .restaurant__about button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#restaurants .restaurant .restaurant__about i {
+  font-size: 2.3rem;
+}
+
+footer {
+  background: #353535;
+  height: 24vh;
+  margin-top: 6rem;
+}
+
+footer .footer__container {
+  width: 88%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 12vh;
+}
+
+footer ul i {
+  font-size: 1.2rem;
+  width: 5%;
+}
+
+footer a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 2rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */

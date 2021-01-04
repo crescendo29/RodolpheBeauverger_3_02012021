@@ -1,9 +1,9 @@
 header {
   @include flex(center, center, row);
-  padding: 2rem 0 1rem 0;
+  padding: 1.5rem 0 1rem 0;
   box-shadow: 0 0.2rem 0.5rem rgb(187, 186, 186);
   position: relative;
-  img {
-    width: 50%;
+  h1 {
+    font-family: "Shrikhand", sans-serif;
   }
 }
