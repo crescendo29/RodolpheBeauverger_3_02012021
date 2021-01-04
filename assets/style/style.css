@@ -19,7 +19,6 @@ h1 {
   font-size: 2.3rem;
 }
 
-li,
 button,
 label,
 input,
@@ -104,7 +103,7 @@ header img {
 .hero__description {
   text-align: center;
   background: #f6f6f6;
-  min-height: 43vh;
+  min-height: 35vh;
 }
 
 .hero__description h2 {
@@ -126,5 +125,88 @@ header img {
   padding: 1.4rem;
   -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
           box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
+}
+
+.hero__how {
+  width: 90%;
+  margin: auto;
+  min-height: 55vh;
+}
+
+.hero__how h2 {
+  padding-top: 4rem;
+}
+
+.hero__how ol {
+  padding-top: 2.5rem;
+  list-style: none;
+  counter-reset: li;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero__how ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 95%;
+  border-radius: 25px;
+  min-height: 9vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  background: #f6f6f6;
+  margin: 0rem 3rem 3rem 3rem;
+  -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+          box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+}
+
+.hero__how ol li i {
+  font-size: 2rem;
+  color: #7e7e7e;
+}
+
+.hero__how ol :nth-child(3) {
+  background: #f5edff;
+}
+
+.hero__how ol :nth-child(3) i {
+  color: #9356dc;
+}
+
+.hero__how ol li::before {
+  content: counter(li);
+  counter-increment: li;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: inline-block;
+  width: 1rem;
+  background: #9356dc;
+  border-radius: 100%;
+  padding: 0.3rem 0.7rem;
+  margin-left: -3rem;
+  margin-right: 0rem;
+  direction: rtl;
 }
 /*# sourceMappingURL=style.css.map */
