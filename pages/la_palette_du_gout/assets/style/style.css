@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+button,
+a,
+p {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4,
+h5 {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5rem 0 1rem 0;
+}
+
+header h1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  font-family: "Shrikhand", sans-serif;
+}
+
+footer {
+  background: #353535;
+  height: 24vh;
+  margin-top: 6rem;
+}
+
+footer .footer__container {
+  width: 88%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 12vh;
+}
+
+footer ul i {
+  font-size: 1.2rem;
+  width: 5%;
+}
+
+footer a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+footer h2 {
+  font-family: "Shrikhand";
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 2rem 0rem;
+}
+/*# sourceMappingURL=style.css.map */
