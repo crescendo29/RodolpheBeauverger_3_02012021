@@ -69,6 +69,7 @@ header {
 
 header h1 {
   font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
 }
 
 .hero__location {
@@ -261,6 +262,10 @@ header h1 {
   padding: 0.6rem 1rem;
   background: #99e2d0;
   color: #008766;
+}
+
+#restaurants .restaurant a:hover {
+  color: #9356dc;
 }
 
 #restaurants .restaurant .restaurant__about {

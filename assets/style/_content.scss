@@ -33,6 +33,9 @@
       background: #99e2d0;
       color: #008766;
     }
+    a:hover {
+      color: #9356dc;
+    }
     .restaurant__about {
       @include flex(space-between, center, row);
       width: 90%;

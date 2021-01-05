@@ -22,20 +22,21 @@ h1 {
 button,
 a,
 p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  color: #3d3d3d;
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2.8rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 h4,
 h5 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 ul {
@@ -68,6 +69,358 @@ header h1 {
       -ms-flex: 0 0 60%;
           flex: 0 0 60%;
   font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+}
+
+#hero {
+  background: #f6f6f6;
+}
+
+#hero img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+#hero .hero__name {
+  position: relative;
+  top: -45px;
+  padding: 3rem 2rem 0rem 1.5rem;
+  background: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#hero .hero__name h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  margin-bottom: -2rem;
+}
+
+#hero .hero__name i {
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  margin-bottom: -2rem;
+}
+
+#menu {
+  background: #f6f6f6;
+}
+
+.menu__entrees {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__entrees h3 {
+  font-weight: 400;
+  color: #3d3d3d;
+  padding-left: 0.5rem;
+}
+
+.menu__entrees .underline {
+  width: 12%;
+  margin-top: 0.4rem;
+  background: #99e2d0;
+  height: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.menu__entrees .menu__entrees__list {
+  background: white;
+  -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+          box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 1rem 1.3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+  text-overflow: ellipsis;
+}
+
+.menu__entrees .menu__entrees__list h4 {
+  padding-bottom: 0.8rem;
+}
+
+.menu__entrees .menu__entrees__list .menu__entrees__list__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu__entrees .menu__entrees__list .menu__entrees__list__price .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  padding: 3rem 3rem 0rem 1rem;
+  width: 15%;
+  background: white;
+  position: relative;
+}
+
+.menu__entrees .menu__entrees__list .menu__entrees__list__price .fa-check-circle {
+  display: none;
+  /*background: #99e2d0;
+        @include flex(center, center, row);
+        width: 15%;
+        right: -40px;
+        height: 5.5rem;
+        position: absolute;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: white;
+        font-size: 2rem;*/
+}
+
+.menu__plats {
+  width: 95%;
+  margin: auto;
+  padding-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__plats h3 {
+  font-weight: 400;
+  color: #3d3d3d;
+  padding-left: 0.5rem;
+}
+
+.menu__plats .underline {
+  width: 8%;
+  margin-top: 0.4rem;
+  background: #99e2d0;
+  height: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.menu__plats .menu__plats__list {
+  background: white;
+  -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+          box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 1rem 1.3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+  text-overflow: ellipsis;
+}
+
+.menu__plats .menu__plats__list h4 {
+  padding-bottom: 0.8rem;
+}
+
+.menu__plats .menu__plats__list .menu__plats__list__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu__plats .menu__plats__list .menu__plats__list__price .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  padding: 1.5rem 3rem 0rem 1rem;
+  width: 15%;
+  background: white;
+  position: relative;
+}
+
+.menu__plats .menu__plats__list .menu__plats__list__price .fa-check-circle {
+  display: none;
+  /*background: #99e2d0;
+        @include flex(center, center, row);
+        width: 15%;
+        right: -40px;
+        height: 5.5rem;
+        position: absolute;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: white;
+        font-size: 2rem;*/
+}
+
+.menu__desserts {
+  padding-top: 5rem;
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu__desserts h3 {
+  font-weight: 400;
+  color: #3d3d3d;
+  padding-left: 0.5rem;
+}
+
+.menu__desserts .underline {
+  width: 8%;
+  margin-top: 0.4rem;
+  background: #99e2d0;
+  height: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.menu__desserts .menu__desserts__list {
+  background: white;
+  -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+          box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem 1rem 1.3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+  text-overflow: ellipsis;
+}
+
+.menu__desserts .menu__desserts__list h4 {
+  padding-bottom: 0.8rem;
+}
+
+.menu__desserts .menu__desserts__list .menu__desserts__list__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu__desserts .menu__desserts__list .menu__desserts__list__price .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d3d3d;
+  padding: 1.5rem 3rem 0rem 1rem;
+  width: 15%;
+  background: white;
+  position: relative;
+}
+
+.menu__desserts .menu__desserts__list .menu__desserts__list__price .fa-check-circle {
+  display: none;
+  /*background: #99e2d0;
+        @include flex(center, center, row);
+        width: 15%;
+        right: -40px;
+        height: 5.5rem;
+        position: absolute;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: white;
+        font-size: 2rem;*/
 }
 
 footer {
