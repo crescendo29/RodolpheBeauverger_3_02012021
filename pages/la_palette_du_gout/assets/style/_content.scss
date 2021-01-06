@@ -18,32 +18,102 @@
     margin-left: 0.5rem;
   }
   .menu__entrees__list {
+    cursor: pointer;
     background: white;
+    width: 100%;
+    padding: 3.4rem 0rem;
+    margin: auto;
+    margin-top: 1.5rem;
     box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
       3px 5px 15px rgba(161, 161, 161, 0.1);
-    width: 100%;
-    margin-top: 1.5rem;
-    padding: 1rem 1rem 1.3rem 1rem;
-    @include flex(space-between, center, row);
     border-radius: 15px;
-    text-overflow: ellipsis;
-    h4 {
-      padding-bottom: 0.8rem;
+    @include flex(space-between, center, row);
+    overflow: hidden;
+    position: relative;
+    animation: slidein 10s ease;
+    &:hover div:nth-child(2) {
+      animation: slide 1s ease forwards;
+      .fa-check-circle {
+        animation: spin 1s ease;
+      }
+    }
+    .menu__entrees__list__description {
+      position: absolute;
+      width: 70%;
+      .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-top: 0.3rem;
+        padding-left: 1rem;
+      }
     }
     .menu__entrees__list__price {
       @include flex(center, center, row);
+      position: absolute;
+      right: 0;
+      padding-left: 2rem;
+      background: transparent;
+      font-weight: 600;
+      transform: translateX(6rem);
       .price {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #3d3d3d;
-        padding: 3rem 3rem 0rem 1rem;
-        width: 15%;
-        background: white;
-        position: relative;
+        padding-top: 2.5rem;
+        padding-right: 2rem;
       }
-      .fa-check-circle {
-        display: none;
-        /*background: #99e2d0;
+      span {
+        @include flex(center, center, row);
+        width: 7rem;
+        height: 7rem;
+        background: #99e2d0;
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
+  .menu__plats {
+    width: 95%;
+    margin: auto;
+    padding-top: 5rem;
+    @include flex(space-between, start, column);
+    h3 {
+      font-weight: 400;
+      color: #3d3d3d;
+      padding-left: 0.5rem;
+    }
+    .underline {
+      width: 8%;
+      margin-top: 0.4rem;
+      background: #99e2d0;
+      height: 0.3rem;
+      margin-left: 0.5rem;
+    }
+    .menu__plats__list {
+      background: white;
+      box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
+        3px 5px 15px rgba(161, 161, 161, 0.1);
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 1rem 1rem 1.3rem 1rem;
+      @include flex(space-between, center, row);
+      border-radius: 15px;
+      text-overflow: ellipsis;
+      h4 {
+        padding-bottom: 0.8rem;
+      }
+      .menu__plats__list__price {
+        @include flex(center, center, row);
+        .price {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #3d3d3d;
+          padding: 1.5rem 3rem 0rem 1rem;
+          width: 15%;
+          background: white;
+          position: relative;
+        }
+        .fa-check-circle {
+          display: none;
+          /*background: #99e2d0;
         @include flex(center, center, row);
         width: 15%;
         right: -40px;
@@ -53,121 +123,96 @@
         border-bottom-right-radius: 15px;
         color: white;
         font-size: 2rem;*/
+        }
+      }
+    }
+  }
+  .menu__desserts {
+    padding-top: 5rem;
+    width: 95%;
+    margin: auto;
+    @include flex(space-between, start, column);
+    h3 {
+      font-weight: 400;
+      color: #3d3d3d;
+      padding-left: 0.5rem;
+    }
+    .underline {
+      width: 8%;
+      margin-top: 0.4rem;
+      background: #99e2d0;
+      height: 0.3rem;
+      margin-left: 0.5rem;
+    }
+    .menu__desserts__list {
+      background: white;
+      box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
+        3px 5px 15px rgba(161, 161, 161, 0.1);
+      width: 100%;
+      margin-top: 1.5rem;
+      padding: 1rem 1rem 1.3rem 1rem;
+      @include flex(space-between, center, row);
+      border-radius: 15px;
+      text-overflow: ellipsis;
+      h4 {
+        padding-bottom: 0.8rem;
+      }
+      .menu__desserts__list__price {
+        @include flex(center, center, row);
+        .price {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #3d3d3d;
+          padding: 1.5rem 3rem 0rem 1rem;
+          width: 15%;
+          background: white;
+          position: relative;
+        }
+        .fa-check-circle {
+          display: none;
+          /*background: #99e2d0;
+        @include flex(center, center, row);
+        width: 15%;
+        right: -40px;
+        height: 5.5rem;
+        position: absolute;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: white;
+        font-size: 2rem;*/
+        }
       }
     }
   }
 }
-.menu__plats {
-  width: 95%;
-  margin: auto;
-  padding-top: 5rem;
-  @include flex(space-between, start, column);
-  h3 {
-    font-weight: 400;
-    color: #3d3d3d;
-    padding-left: 0.5rem;
+@keyframes slide {
+  from {
+    transform: translatex(6rem);
   }
-  .underline {
-    width: 8%;
-    margin-top: 0.4rem;
-    background: #99e2d0;
-    height: 0.3rem;
-    margin-left: 0.5rem;
-  }
-  .menu__plats__list {
-    background: white;
-    box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
-      3px 5px 15px rgba(161, 161, 161, 0.1);
-    width: 100%;
-    margin-top: 1.5rem;
-    padding: 1rem 1rem 1.3rem 1rem;
-    @include flex(space-between, center, row);
-    border-radius: 15px;
-    text-overflow: ellipsis;
-    h4 {
-      padding-bottom: 0.8rem;
-    }
-    .menu__plats__list__price {
-      @include flex(center, center, row);
-      .price {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #3d3d3d;
-        padding: 1.5rem 3rem 0rem 1rem;
-        width: 15%;
-        background: white;
-        position: relative;
-      }
-      .fa-check-circle {
-        display: none;
-        /*background: #99e2d0;
-        @include flex(center, center, row);
-        width: 15%;
-        right: -40px;
-        height: 5.5rem;
-        position: absolute;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        color: white;
-        font-size: 2rem;*/
-      }
-    }
+  to {
+    transform: translatex(0.1rem);
   }
 }
-.menu__desserts {
-  padding-top: 5rem;
-  width: 95%;
-  margin: auto;
-  @include flex(space-between, start, column);
-  h3 {
-    font-weight: 400;
-    color: #3d3d3d;
-    padding-left: 0.5rem;
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
   }
-  .underline {
-    width: 8%;
-    margin-top: 0.4rem;
-    background: #99e2d0;
-    height: 0.3rem;
-    margin-left: 0.5rem;
+  to {
+    transform: rotateZ(360deg);
   }
-  .menu__desserts__list {
-    background: white;
-    box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2),
-      3px 5px 15px rgba(161, 161, 161, 0.1);
+}
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    height: 300%;
+    opacity: 0;
+    background: yellow;
+  }
+
+  to {
+    margin-top: 0%;
     width: 100%;
-    margin-top: 1.5rem;
-    padding: 1rem 1rem 1.3rem 1rem;
-    @include flex(space-between, center, row);
-    border-radius: 15px;
-    text-overflow: ellipsis;
-    h4 {
-      padding-bottom: 0.8rem;
-    }
-    .menu__desserts__list__price {
-      @include flex(center, center, row);
-      .price {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #3d3d3d;
-        padding: 1.5rem 3rem 0rem 1rem;
-        width: 15%;
-        background: white;
-        position: relative;
-      }
-      .fa-check-circle {
-        display: none;
-        /*background: #99e2d0;
-        @include flex(center, center, row);
-        width: 15%;
-        right: -40px;
-        height: 5.5rem;
-        position: absolute;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        color: white;
-        font-size: 2rem;*/
-      }
-    }
+    opacity: 1;
+    background: blue;
   }
 }

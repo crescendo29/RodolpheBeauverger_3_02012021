@@ -154,12 +154,15 @@ header h1 {
 }
 
 .menu__entrees .menu__entrees__list {
+  cursor: pointer;
   background: white;
+  width: 100%;
+  padding: 3.4rem 0rem;
+  margin: auto;
+  margin-top: 1.5rem;
   -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
           box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
-  width: 100%;
-  margin-top: 1.5rem;
-  padding: 1rem 1rem 1.3rem 1rem;
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,12 +176,31 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-radius: 15px;
-  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
 }
 
-.menu__entrees .menu__entrees__list h4 {
-  padding-bottom: 0.8rem;
+.menu__entrees .menu__entrees__list:hover div:nth-child(2) {
+  -webkit-animation: slide 1s ease forwards;
+          animation: slide 1s ease forwards;
+}
+
+.menu__entrees .menu__entrees__list:hover div:nth-child(2) .fa-check-circle {
+  -webkit-animation: spin 1s ease;
+          animation: spin 1s ease;
+}
+
+.menu__entrees .menu__entrees__list .menu__entrees__list__description {
+  position: absolute;
+  width: 70%;
+}
+
+.menu__entrees .menu__entrees__list .menu__entrees__list__description .ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 0.3rem;
+  padding-left: 1rem;
 }
 
 .menu__entrees .menu__entrees__list .menu__entrees__list__price {
@@ -195,33 +217,42 @@ header h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: absolute;
+  right: 0;
+  padding-left: 2rem;
+  background: transparent;
+  font-weight: 600;
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
 }
 
 .menu__entrees .menu__entrees__list .menu__entrees__list__price .price {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #3d3d3d;
-  padding: 3rem 3rem 0rem 1rem;
-  width: 15%;
-  background: white;
-  position: relative;
+  padding-top: 2.5rem;
+  padding-right: 2rem;
 }
 
-.menu__entrees .menu__entrees__list .menu__entrees__list__price .fa-check-circle {
-  display: none;
-  /*background: #99e2d0;
-        @include flex(center, center, row);
-        width: 15%;
-        right: -40px;
-        height: 5.5rem;
-        position: absolute;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        color: white;
-        font-size: 2rem;*/
+.menu__entrees .menu__entrees__list .menu__entrees__list__price span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 6rem;
+  height: 7rem;
+  background: #99e2d0;
+  color: white;
+  font-size: 2rem;
 }
 
-.menu__plats {
+.menu__entrees .menu__plats {
   width: 95%;
   margin: auto;
   padding-top: 5rem;
@@ -240,13 +271,13 @@ header h1 {
           flex-direction: column;
 }
 
-.menu__plats h3 {
+.menu__entrees .menu__plats h3 {
   font-weight: 400;
   color: #3d3d3d;
   padding-left: 0.5rem;
 }
 
-.menu__plats .underline {
+.menu__entrees .menu__plats .underline {
   width: 8%;
   margin-top: 0.4rem;
   background: #99e2d0;
@@ -254,7 +285,7 @@ header h1 {
   margin-left: 0.5rem;
 }
 
-.menu__plats .menu__plats__list {
+.menu__entrees .menu__plats .menu__plats__list {
   background: white;
   -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
           box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
@@ -278,11 +309,11 @@ header h1 {
   text-overflow: ellipsis;
 }
 
-.menu__plats .menu__plats__list h4 {
+.menu__entrees .menu__plats .menu__plats__list h4 {
   padding-bottom: 0.8rem;
 }
 
-.menu__plats .menu__plats__list .menu__plats__list__price {
+.menu__entrees .menu__plats .menu__plats__list .menu__plats__list__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,7 +329,7 @@ header h1 {
           flex-direction: row;
 }
 
-.menu__plats .menu__plats__list .menu__plats__list__price .price {
+.menu__entrees .menu__plats .menu__plats__list .menu__plats__list__price .price {
   font-size: 1.5rem;
   font-weight: 600;
   color: #3d3d3d;
@@ -308,7 +339,7 @@ header h1 {
   position: relative;
 }
 
-.menu__plats .menu__plats__list .menu__plats__list__price .fa-check-circle {
+.menu__entrees .menu__plats .menu__plats__list .menu__plats__list__price .fa-check-circle {
   display: none;
   /*background: #99e2d0;
         @include flex(center, center, row);
@@ -322,7 +353,7 @@ header h1 {
         font-size: 2rem;*/
 }
 
-.menu__desserts {
+.menu__entrees .menu__desserts {
   padding-top: 5rem;
   width: 95%;
   margin: auto;
@@ -341,13 +372,13 @@ header h1 {
           flex-direction: column;
 }
 
-.menu__desserts h3 {
+.menu__entrees .menu__desserts h3 {
   font-weight: 400;
   color: #3d3d3d;
   padding-left: 0.5rem;
 }
 
-.menu__desserts .underline {
+.menu__entrees .menu__desserts .underline {
   width: 8%;
   margin-top: 0.4rem;
   background: #99e2d0;
@@ -355,7 +386,7 @@ header h1 {
   margin-left: 0.5rem;
 }
 
-.menu__desserts .menu__desserts__list {
+.menu__entrees .menu__desserts .menu__desserts__list {
   background: white;
   -webkit-box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
           box-shadow: 3px 5px 5px rgba(161, 161, 161, 0.2), 3px 5px 15px rgba(161, 161, 161, 0.1);
@@ -379,11 +410,11 @@ header h1 {
   text-overflow: ellipsis;
 }
 
-.menu__desserts .menu__desserts__list h4 {
+.menu__entrees .menu__desserts .menu__desserts__list h4 {
   padding-bottom: 0.8rem;
 }
 
-.menu__desserts .menu__desserts__list .menu__desserts__list__price {
+.menu__entrees .menu__desserts .menu__desserts__list .menu__desserts__list__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +430,7 @@ header h1 {
           flex-direction: row;
 }
 
-.menu__desserts .menu__desserts__list .menu__desserts__list__price .price {
+.menu__entrees .menu__desserts .menu__desserts__list .menu__desserts__list__price .price {
   font-size: 1.5rem;
   font-weight: 600;
   color: #3d3d3d;
@@ -409,7 +440,7 @@ header h1 {
   position: relative;
 }
 
-.menu__desserts .menu__desserts__list .menu__desserts__list__price .fa-check-circle {
+.menu__entrees .menu__desserts .menu__desserts__list .menu__desserts__list__price .fa-check-circle {
   display: none;
   /*background: #99e2d0;
         @include flex(center, center, row);
@@ -421,6 +452,50 @@ header h1 {
         border-bottom-right-radius: 15px;
         color: white;
         font-size: 2rem;*/
+}
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translatex(6rem);
+            transform: translatex(6rem);
+  }
+  to {
+    -webkit-transform: translatex(0rem);
+            transform: translatex(0rem);
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translatex(6rem);
+            transform: translatex(6rem);
+  }
+  to {
+    -webkit-transform: translatex(0rem);
+            transform: translatex(0rem);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
 }
 
 footer {
