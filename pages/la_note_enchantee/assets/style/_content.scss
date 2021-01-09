@@ -19,6 +19,18 @@
     height: 0.3rem;
     margin-left: 0.5rem;
   }
+  .menu__entrees__list {
+    opacity: 0;
+    animation: slidein 0.6s ease 0.3s forwards;
+  }
+  .menu__plats__list {
+    opacity: 0;
+    animation: slidein 0.6s ease 0.6s forwards;
+  }
+  .menu__desserts__list {
+    opacity: 0;
+    animation: slidein 0.6s ease 0.9s forwards;
+  }
   .menu__entrees__list,
   .menu__plats__list,
   .menu__desserts__list {
@@ -34,7 +46,6 @@
     @include flex(space-between, center, row);
     overflow: hidden;
     position: relative;
-    animation: slidein 0.6s ease;
     &:hover div:nth-child(2) {
       animation: slide 1s ease forwards;
       .fa-check-circle {
@@ -84,6 +95,26 @@
   h3 {
     margin-top: 3rem;
     animation: slidein 0.6s ease;
+  }
+}
+.book {
+  width: 50%;
+  margin: auto;
+  margin-top: 4rem;
+  @include flex(center, center, row);
+  background: $gradient;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 1.4rem;
+  border: none;
+  box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2),
+    3px 5px 8px rgba(128, 128, 128, 0.1);
+  &:hover {
+    background: $gradientHover;
+    box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4),
+      3px 5px 8px rgba(128, 128, 128, 0.3);
   }
 }
 @keyframes slide {

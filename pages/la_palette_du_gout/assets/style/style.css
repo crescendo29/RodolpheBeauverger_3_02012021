@@ -171,6 +171,30 @@ header h1 {
 }
 
 .menu__entrees .menu__entrees__list,
+.menu__plats .menu__entrees__list,
+.menu__desserts .menu__entrees__list {
+  opacity: 0;
+  -webkit-animation: slidein 0.6s ease 0.3s forwards;
+          animation: slidein 0.6s ease 0.3s forwards;
+}
+
+.menu__entrees .menu__plats__list,
+.menu__plats .menu__plats__list,
+.menu__desserts .menu__plats__list {
+  opacity: 0;
+  -webkit-animation: slidein 0.6s ease 0.6s forwards;
+          animation: slidein 0.6s ease 0.6s forwards;
+}
+
+.menu__entrees .menu__desserts__list,
+.menu__plats .menu__desserts__list,
+.menu__desserts .menu__desserts__list {
+  opacity: 0;
+  -webkit-animation: slidein 0.6s ease 0.9s forwards;
+          animation: slidein 0.6s ease 0.9s forwards;
+}
+
+.menu__entrees .menu__entrees__list,
 .menu__entrees .menu__plats__list,
 .menu__entrees .menu__desserts__list,
 .menu__plats .menu__entrees__list,
@@ -203,8 +227,6 @@ header h1 {
           flex-direction: row;
   overflow: hidden;
   position: relative;
-  -webkit-animation: slidein 0.6s ease;
-          animation: slidein 0.6s ease;
 }
 
 .menu__entrees .menu__entrees__list:hover div:nth-child(2),
@@ -428,8 +450,42 @@ header h1 {
 .menu__plats h3,
 .menu__desserts h3 {
   margin-top: 3rem;
-  -webkit-animation: slidein 0.6s ease;
-          animation: slidein 0.6s ease;
+}
+
+.book {
+  width: 50%;
+  margin: auto;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79d9, #9356dc);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 1.4rem;
+  border: none;
+  -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
+          box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
+}
+
+.book:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff7edb), to(#a161f0));
+  background: linear-gradient(to bottom right, #ff7edb, #a161f0);
+  -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
+          box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
 }
 
 @-webkit-keyframes slide {
@@ -543,6 +599,10 @@ footer ul i {
 footer a {
   color: white;
   font-size: 1.5rem;
+}
+
+footer a:hover {
+  color: #ff79d9;
 }
 
 footer h2 {

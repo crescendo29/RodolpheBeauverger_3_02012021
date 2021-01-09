@@ -117,7 +117,7 @@ header h1 {
   padding-bottom: 2rem;
 }
 
-.hero__description button {
+.hero__description .explore {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9), to(#9356dc));
   background: linear-gradient(to bottom right, #ff79d9, #9356dc);
   color: white;
@@ -130,7 +130,7 @@ header h1 {
           box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2), 3px 5px 8px rgba(128, 128, 128, 0.1);
 }
 
-.hero__description button:hover {
+.hero__description .explore:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#ff7edb), to(#a161f0));
   background: linear-gradient(to bottom right, #ff7edb, #a161f0);
   -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
@@ -355,6 +355,10 @@ footer ul i {
 footer a {
   color: white;
   font-size: 1.5rem;
+}
+
+footer a:hover {
+  color: #ff79d9;
 }
 
 footer h2 {
