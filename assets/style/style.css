@@ -72,6 +72,88 @@ header h1 {
   font-weight: 500;
 }
 
+.loader {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9), to(#9356dc));
+  background: linear-gradient(to bottom right, #ff79d9, #9356dc);
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  -webkit-animation: loader 0.01s;
+          animation: loader 0.01s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.loader .loader__icon {
+  padding: 5rem;
+  font-size: 5rem;
+  position: relative;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loader .fa-mobile-alt {
+  -webkit-animation: scale 1s ease forwards;
+          animation: scale 1s ease forwards;
+}
+
+.loader .fa-list-ul {
+  -webkit-animation: scale 1s ease forwards 0.5s;
+          animation: scale 1s ease forwards 0.5s;
+}
+
+.loader .fa-store {
+  -webkit-animation: scale 1s ease forwards 1s;
+          animation: scale 1s ease forwards 1s;
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 1;
+    z-index: 10000;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loader {
+  from {
+    opacity: 1;
+    z-index: 10000;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@-webkit-keyframes scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 2;
+  }
+}
+
+@keyframes scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 2;
+  }
+}
+
 .hero__location {
   background: #eaeaea;
 }

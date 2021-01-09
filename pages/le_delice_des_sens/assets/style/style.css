@@ -455,6 +455,7 @@ header h1 {
 }
 
 .book {
+  cursor: pointer;
   width: 50%;
   margin: auto;
   margin-top: 4rem;

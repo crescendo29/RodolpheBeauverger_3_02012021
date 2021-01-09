@@ -8,3 +8,50 @@ header {
     font-weight: 500;
   }
 }
+.loader {
+  position: absolute;
+  background: $gradient;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  animation: loader 0.01s;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
+  .loader__icon {
+    padding: 5rem;
+    font-size: 5rem;
+    position: relative;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  .fa-mobile-alt {
+    animation: scale 1s ease forwards;
+  }
+  .fa-list-ul {
+    animation: scale 1s ease forwards 0.5s;
+  }
+  .fa-store {
+    animation: scale 1s ease forwards 1s;
+  }
+}
+@keyframes loader {
+  from {
+    opacity: 1;
+    z-index: 10000;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 2;
+  }
+}
