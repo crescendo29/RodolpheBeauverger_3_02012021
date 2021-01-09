@@ -37,3 +37,43 @@ $gradientHover: linear-gradient(
 @import "hero";
 @import "content";
 @import "footer";
+
+@media all and (min-width: 768px) {
+  header {
+    h1 {
+      transform: translatex(18%);
+    }
+  }
+  #hero img {
+    max-height: 40vh;
+  }
+  #menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .menu__entrees,
+  .menu__plats,
+  .menu__desserts {
+    max-width: 30%;
+  }
+  .menu__plats,
+  .menu__desserts {
+    h3 {
+      margin-top: 0;
+      animation: none;
+    }
+  }
+  .book {
+    max-width: 20%;
+  }
+  .footer__container {
+    max-width: 70%;
+    ul {
+      flex-direction: row;
+      font-weight: 600;
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

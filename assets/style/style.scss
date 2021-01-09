@@ -35,3 +35,58 @@ $gradientHover: linear-gradient(
 @import "hero";
 @import "content";
 @import "footer";
+
+@media all and (min-width: 870px) and(max-width:1340px) {
+  .hero__how {
+    width: 60%;
+  }
+  .restaurant {
+    max-width: 60%;
+  }
+  footer ul {
+    flex-direction: row;
+  }
+}
+
+@media all and (min-width: 1340px) {
+  br {
+    display: none;
+  }
+  .hero__how {
+    width: 60%;
+    h2 {
+      text-align: center;
+    }
+    ol {
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        width: 30%;
+      }
+    }
+  }
+  #restaurants {
+    h2 {
+      text-align: center;
+    }
+  }
+  .restaurants__container {
+    width: 70%;
+    margin: auto;
+    @include flex(space-between, center, row);
+    flex-wrap: wrap;
+    .restaurant {
+      max-width: 40%;
+    }
+  }
+  .footer__container {
+    max-width: 70%;
+    ul {
+      flex-direction: row;
+      font-weight: 600;
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

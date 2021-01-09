@@ -367,4 +367,81 @@ footer h2 {
   font-weight: 400;
   padding: 2rem 0rem;
 }
+
+@media all and (min-width: 870px) and (max-width: 1340px) {
+  .hero__how {
+    width: 60%;
+  }
+  .restaurant {
+    max-width: 60%;
+  }
+  footer ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media all and (min-width: 1340px) {
+  br {
+    display: none;
+  }
+  .hero__how {
+    width: 60%;
+  }
+  .hero__how h2 {
+    text-align: center;
+  }
+  .hero__how ol {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero__how ol li {
+    width: 30%;
+  }
+  #restaurants h2 {
+    text-align: center;
+  }
+  .restaurants__container {
+    width: 70%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurants__container .restaurant {
+    max-width: 40%;
+  }
+  .footer__container {
+    max-width: 70%;
+  }
+  .footer__container ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-weight: 600;
+  }
+  .footer__container ul i {
+    margin-right: 1rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
