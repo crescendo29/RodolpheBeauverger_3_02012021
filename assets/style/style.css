@@ -72,88 +72,6 @@ header h1 {
   font-weight: 500;
 }
 
-.loader {
-  position: absolute;
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9), to(#9356dc));
-  background: linear-gradient(to bottom right, #ff79d9, #9356dc);
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  -webkit-animation: loader 0.01s;
-          animation: loader 0.01s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.loader .loader__icon {
-  padding: 5rem;
-  font-size: 5rem;
-  position: relative;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.loader .fa-mobile-alt {
-  -webkit-animation: scale 1s ease forwards;
-          animation: scale 1s ease forwards;
-}
-
-.loader .fa-list-ul {
-  -webkit-animation: scale 1s ease forwards 0.5s;
-          animation: scale 1s ease forwards 0.5s;
-}
-
-.loader .fa-store {
-  -webkit-animation: scale 1s ease forwards 1s;
-          animation: scale 1s ease forwards 1s;
-}
-
-@-webkit-keyframes loader {
-  from {
-    opacity: 1;
-    z-index: 10000;
-  }
-  to {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-@keyframes loader {
-  from {
-    opacity: 1;
-    z-index: 10000;
-  }
-  to {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-
-@-webkit-keyframes scale {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 2;
-  }
-}
-
-@keyframes scale {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 2;
-  }
-}
-
 .hero__location {
   background: #eaeaea;
 }
@@ -450,6 +368,115 @@ footer h2 {
   padding: 2rem 0rem;
 }
 
+.loader__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #f6f6f6;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: loader 0.01s;
+          animation: loader 0.01s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  position: absolute;
+}
+
+.loader__container .loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: -10px -10px 15px #373737, 10px 10px 10px rgba(255, 255, 255, 0.2), inset -10px -10px 15px rgba(55, 55, 55, 0.5), inset 10px 10px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: -10px -10px 15px #373737, 10px 10px 10px rgba(255, 255, 255, 0.2), inset -10px -10px 15px rgba(55, 55, 55, 0.5), inset 10px 10px 10px rgba(255, 255, 255, 0.2);
+}
+
+.loader__container .loader::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  background: white;
+  border-radius: 50%;
+  -webkit-box-shadow: inset -10px -10px 15px rgba(55, 55, 55, 0.5), inset 10px 10px 10px rgba(255, 255, 255, 0.2);
+          box-shadow: inset -10px -10px 15px rgba(55, 55, 55, 0.5), inset 10px 10px 10px rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.loader__container .loader span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(#99e2d0), to(#ff79da));
+  background: linear-gradient(#9356dc, #99e2d0, #ff79da);
+  -webkit-filter: blur(20%);
+          filter: blur(20%);
+  z-index: 1;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 1;
+    z-index: 10000;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes loader {
+  from {
+    opacity: 1;
+    z-index: 10000;
+  }
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @media all and (min-width: 870px) and (max-width: 1340px) {
   .hero__how {
     width: 60%;
@@ -524,21 +551,6 @@ footer h2 {
   }
   .footer__container ul i {
     margin-right: 1rem;
-  }
-}
-
-@media all and (max-width: 840px) {
-  .loader {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

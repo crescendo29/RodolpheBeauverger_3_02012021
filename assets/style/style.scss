@@ -35,6 +35,7 @@ $gradientHover: linear-gradient(
 @import "hero";
 @import "content";
 @import "footer";
+@import "loader";
 
 @media all and (min-width: 870px) and(max-width:1340px) {
   .hero__how {
@@ -88,12 +89,5 @@ $gradientHover: linear-gradient(
         margin-right: 1rem;
       }
     }
-  }
-}
-@media all and (max-width: 840px) {
-  .loader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
