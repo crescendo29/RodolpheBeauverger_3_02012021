@@ -34,7 +34,7 @@
     box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.2),
       3px 5px 8px rgba(128, 128, 128, 0.1);
     &:hover {
-      background: $gradientHover;
+      opacity: 0.8;
       box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4),
         3px 5px 8px rgba(128, 128, 128, 0.3);
     }

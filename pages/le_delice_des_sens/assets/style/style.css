@@ -485,8 +485,7 @@ header h1 {
 }
 
 .book:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ff7edb), to(#a161f0));
-  background: linear-gradient(to bottom right, #ff7edb, #a161f0);
+  opacity: 0.8;
   -webkit-box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
           box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.4), 3px 5px 8px rgba(128, 128, 128, 0.3);
 }
