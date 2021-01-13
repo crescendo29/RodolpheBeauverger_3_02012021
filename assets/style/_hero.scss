@@ -44,6 +44,7 @@
   width: 90%;
   margin: auto;
   padding-bottom: 5vh;
+  animation: slidein 3.5s ease 0.5s;
   h2 {
     padding-top: 4rem;
   }
@@ -69,8 +70,15 @@
         padding: 0 3rem;
       }
     }
+    :nth-child(1) {
+      animation: slidefr 0.5s ease 2.5s both;
+    }
+    :nth-child(2) {
+      animation: slidefr 0.5s ease 3s both;
+    }
     :nth-child(3) {
       background: #f5edff;
+      animation: slidefr 0.5s ease 3.5s both;
       i {
         color: #9356dc;
       }
@@ -90,5 +98,16 @@
       margin-right: 0rem;
       direction: rtl;
     }
+  }
+}
+@keyframes slidefr {
+  from {
+    opacity: 0;
+    transform: translatex(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
