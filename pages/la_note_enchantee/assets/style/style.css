@@ -64,6 +64,10 @@ header {
   padding: 1.5rem 0 1rem 0;
 }
 
+header i {
+  font-size: 2rem;
+}
+
 header h1 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60%;
@@ -112,7 +116,13 @@ header h1 {
   margin-bottom: -2rem;
 }
 
-#hero .hero__name i {
+#hero .hero__name button {
+  border: none;
+  cursor: pointer;
+  background: #f6f6f6;
+}
+
+#hero .hero__name button i {
   font-size: 2.5rem;
   padding-right: 2rem;
   padding-top: 2rem;
@@ -120,7 +130,7 @@ header h1 {
   transition: all 0.3s ease;
 }
 
-#hero .hero__name i:hover {
+#hero .hero__name button i:hover {
   font-weight: 900;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79d9));
   background: linear-gradient(to bottom left, #9356dc, #ff79d9);
@@ -616,6 +626,9 @@ footer h2 {
 }
 
 @media all and (min-width: 768px) {
+  header i {
+    font-size: 3rem;
+  }
   header h1 {
     -webkit-transform: translatex(18%);
             transform: translatex(18%);

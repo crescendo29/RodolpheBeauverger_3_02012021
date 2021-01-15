@@ -40,6 +40,9 @@ $gradientHover: linear-gradient(
 
 @media all and (min-width: 768px) {
   header {
+    i {
+      font-size: 3rem;
+    }
     h1 {
       transform: translatex(18%);
     }

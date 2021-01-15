@@ -335,17 +335,17 @@ header h1 {
 
 #restaurants .restaurant .restaurant__about .favorite {
   cursor: pointer;
+  background: white;
+  border: none;
 }
 
 #restaurants .restaurant .restaurant__about i {
   font-size: 2.3rem;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  cursor: pointer;
 }
 
 #restaurants .restaurant .restaurant__about i:hover {
-  cursor: pointer;
   font-weight: 600;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79d9));
   background: linear-gradient(to bottom left, #9356dc, #ff79d9);
