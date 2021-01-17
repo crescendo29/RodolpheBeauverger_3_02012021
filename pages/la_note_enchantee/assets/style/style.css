@@ -294,7 +294,7 @@ header h1 {
 .menu__desserts .menu__desserts__list .menu__plats__list__description,
 .menu__desserts .menu__desserts__list .menu__desserts__list__description {
   position: absolute;
-  width: 70%;
+  width: 75%;
 }
 
 .menu__entrees .menu__entrees__list .menu__entrees__list__description .ellipsis,
@@ -374,7 +374,7 @@ header h1 {
   position: absolute;
   right: 0;
   padding-left: 2rem;
-  background: transparent;
+  background: white;
   font-weight: 600;
   -webkit-transform: translateX(7rem);
           transform: translateX(7rem);
