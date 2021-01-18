@@ -8,3 +8,15 @@ header {
     font-weight: 500;
   }
 }
+.page {
+  @include flex(space-around, center, row);
+  padding: 1.5rem 0 1rem 0;
+  i {
+    font-size: 2rem;
+  }
+  h1 {
+    flex: 0 0 60%;
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+  }
+}

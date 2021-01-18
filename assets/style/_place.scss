@@ -1,12 +1,11 @@
-#hero {
+#place {
   background: #f6f6f6;
   img {
     width: 100%;
     object-fit: cover;
     position: relative;
-    height: 38vh;
   }
-  .hero__name {
+  .place__name {
     position: relative;
     top: -45px;
     padding: 3rem 2rem 0rem 1.5rem;
@@ -18,6 +17,7 @@
       font-family: "Shrikhand", sans-serif;
       font-weight: 500;
       margin-bottom: -2rem;
+      font-size: 2.8rem;
     }
     button {
       border: none;
