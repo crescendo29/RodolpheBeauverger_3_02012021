@@ -937,7 +937,7 @@ footer h2 {
           flex-direction: row;
   background: #f6f6f6;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   -webkit-animation: loader 0.01s ease-in-out 2.5s;
           animation: loader 0.01s ease-in-out 2.5s;
   -webkit-animation-fill-mode: both;
@@ -977,8 +977,6 @@ footer h2 {
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(#99e2d0), to(#ff79da));
   background: linear-gradient(#9356dc, #99e2d0, #ff79da);
-  -webkit-filter: blur(20%);
-          filter: blur(20%);
   z-index: 1;
   -webkit-animation: animate 1s linear infinite;
           animation: animate 1s linear infinite;
