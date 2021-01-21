@@ -1,66 +1,90 @@
 .loader__container {
-  @include flex(center, center, row);
-  background: #f6f6f6;
-  min-width: 100%;
-  min-height: 100vh;
-  animation: loader 0.01s ease-in-out 2.5s;
-  animation-fill-mode: both;
+  background: #000;
   position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  animation: 0.1s vanish 3s ease forwards;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $gradientBis;
+    mix-blend-mode: color;
+    pointer-events: none;
+  }
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 80%;
+    top: 40px;
+  }
   .loader {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 4px solid #f6f6f6;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-      10px 10px 10px rgba(55, 55, 55, 0.2),
-      inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-      inset 10px 10px 10px rgba(55, 55, 55, 0.2);
-    &::before {
-      content: "";
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      right: 25px;
-      bottom: 25px;
-      background: white;
-      border-radius: 50%;
-      box-shadow: inset -10px -10px 15px
-          rgba(255, 255, 255, 0.5),
-        inset 10px 10px 10px rgba(55, 55, 55, 0.2);
-      z-index: 2;
-    }
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    font-size: 7rem;
+    letter-spacing: 0.3rem;
     span {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: linear-gradient(
-        #9356dc,
-        #99e2d0,
-        #ff79da
-      );
-      z-index: 1;
-      animation: animate 1s linear infinite;
+      opacity: 0;
+      display: inline-block;
+      animation: animate 1s linear forwards;
+      &:nth-child(1) {
+        animation-delay: 250ms;
+      }
+      &:nth-child(2) {
+        animation-delay: 500ms;
+      }
+      &:nth-child(3) {
+        animation-delay: 750ms;
+      }
+      &:nth-child(4) {
+        animation-delay: 1000ms;
+      }
+      &:nth-child(5) {
+        animation-delay: 1250ms;
+      }
+      &:nth-child(6) {
+        animation-delay: 1500ms;
+      }
+      &:nth-child(7) {
+        animation-delay: 1750ms;
+      }
+      &:nth-child(8) {
+        animation-delay: 2000ms;
+      }
     }
-  }
-}
-@keyframes loader {
-  from {
-    opacity: 1;
-    z-index: 10000;
-  }
-  to {
-    opacity: 0;
-    z-index: -10;
   }
 }
 @keyframes animate {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
   }
   100% {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: rotateY(0deg);
+    filter: blur(0);
+  }
+}
+@keyframes vanish {
+  0% {
+    scale: (1);
+    z-index: 9999;
+  }
+  100% {
+    scale: (0);
+    z-index: -10000;
   }
 }

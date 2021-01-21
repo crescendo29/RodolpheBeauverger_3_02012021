@@ -15,7 +15,11 @@
 
     <main>
         <section id="place">
-            <img src="../../images/restaurants/mobile/palette_mobile.jpg" alt="photo de plat">
+            <img srcset="../../images/restaurants/mobile/palette_mobile.jpg 700w,
+            ../../images/restaurants/ultra/palette_ultra.jpg 4402w"
+            sizes="(min-width: 1340px) 1300px,
+                    700px" 
+            src="../../images/restaurants/mobile/palette_mobile.jpg" alt="photo de plat">
             <div class="place__name">
                 <h2>La palette du goût</h2>
                 <button class="favorite" type="button"><i class="far fa-heart"></i></button>

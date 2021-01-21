@@ -15,7 +15,11 @@
 
     <main>
         <section id="place">
-            <img src="../../images/restaurants/mobile/note_mobile.jpg" alt="photo de plat">
+            <img srcset="../../images/restaurants/mobile/note_mobile.jpg 700w,
+            ../../images/restaurants/ultra/note_ultra.jpg 3024w"
+            sizes="(min-width: 1340px) 1300px,
+                    700px" 
+            src="../../images/restaurants/mobile/note_mobile.jpg" alt="photo de plat">
             <div class="place__name">
                 <h2>La note enchantée</h2>
                 <button class="favorite" type="button"><i class="far fa-heart"></i></button>
