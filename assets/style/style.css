@@ -1051,22 +1051,22 @@ footer h2 {
 
 @-webkit-keyframes vanish {
   0% {
-    scale: 1;
+    opacity: 1;
     z-index: 9999;
   }
   100% {
-    scale: 0;
+    opacity: 0;
     z-index: -10000;
   }
 }
 
 @keyframes vanish {
   0% {
-    scale: 1;
+    opacity: 1;
     z-index: 9999;
   }
   100% {
-    scale: 0;
+    opacity: 0;
     z-index: -10000;
   }
 }
