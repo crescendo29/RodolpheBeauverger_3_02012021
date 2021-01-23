@@ -78,6 +78,12 @@ $gradientBis: linear-gradient(
 }
 
 @media all and (min-width: 1340px) {
+  .loader__container {
+    .loader {
+      transform: translate(-5%, -50%);
+      font-size: 7rem;
+    }
+  }
   br {
     display: none;
   }

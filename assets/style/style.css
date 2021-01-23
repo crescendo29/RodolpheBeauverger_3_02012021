@@ -959,12 +959,12 @@ footer h2 {
   padding: 0;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
   width: 100%;
   text-align: center;
   color: #ddd;
-  font-size: 7rem;
+  font-size: 3.5rem;
   letter-spacing: 0.3rem;
 }
 
@@ -1186,6 +1186,11 @@ footer h2 {
 }
 
 @media all and (min-width: 1340px) {
+  .loader__container .loader {
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    font-size: 7rem;
+  }
   br {
     display: none;
   }
