@@ -365,8 +365,6 @@ header h1 {
   cursor: pointer;
   background: white;
   border: none;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 #restaurants .restaurant .restaurant__about i {
@@ -379,7 +377,6 @@ header h1 {
   font-weight: 600;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79d9));
   background: linear-gradient(to bottom left, #9356dc, #ff79d9);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1131,7 +1128,6 @@ footer h2 {
   font-weight: 900;
   background: -webkit-gradient(linear, right top, left bottom, from(#9356dc), to(#ff79d9));
   background: linear-gradient(to bottom left, #9356dc, #ff79d9);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }

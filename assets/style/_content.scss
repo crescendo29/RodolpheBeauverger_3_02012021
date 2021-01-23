@@ -51,8 +51,6 @@
         cursor: pointer;
         background: white;
         border: none;
-        background-clip: text;
-        -webkit-background-clip: text;
       }
       i {
         font-size: 2.3rem;
@@ -60,7 +58,6 @@
         &:hover {
           font-weight: 600;
           background: $gradientBis;
-          background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
         }
