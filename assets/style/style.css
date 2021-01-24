@@ -868,7 +868,7 @@ header h1 {
 
 footer {
   background: #353535;
-  height: 24vh;
+  height: 30vh;
   margin-top: 6rem;
 }
 
@@ -897,6 +897,10 @@ footer ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 12vh;
+}
+
+footer ul li {
+  padding-top: 1rem;
 }
 
 footer ul i {
